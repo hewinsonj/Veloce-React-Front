@@ -12,7 +12,10 @@ import SignUp from './components/auth/SignUp'
 import SignIn from './components/auth/SignIn'
 import SignOut from './components/auth/SignOut'
 import ChangePassword from './components/auth/ChangePassword'
-import RedbullCreate from './components/RedbullCreate'
+import RedbullCreate from './components/redbulls/RedbullCreate'
+import RedbullIndex from './components/redbulls/RedbullIndex'
+import RedbullShow from './components/redbulls/RedbullShow'
+import NewSnackModal from './components/snacks/NewSnackModal'
 
 const App = () => {
 
@@ -70,11 +73,28 @@ const App = () => {
               </RequireAuth>}
           />
 		  <Route
-            path='/redbulls'
+            path='/create'
             element={
               <RequireAuth user={user}>
                 <RedbullCreate msgAlert={msgAlert} user={user} />
               </RequireAuth>}
+          />
+		<Route
+            path='/redbulls'
+            element={
+              <RequireAuth user={user}>
+                <RedbullIndex msgAlert={msgAlert} user={user} />
+              </RequireAuth>}
+          />
+		 <Route
+            path='/redbulls/:id'
+            element={
+              <RedbullShow msgAlert={msgAlert} user={user} />}
+          />
+		  <Route
+            path='/snacks/:id'
+            element={
+              <NewSnackModal msgAlert={msgAlert} user={user} />}
           />
 				</Routes>
 				{msgAlerts.map((msgAlert) => (
