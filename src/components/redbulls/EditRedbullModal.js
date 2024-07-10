@@ -21,7 +21,15 @@ const EditRedbullModal = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        
+
+    // const updatedRedBull = req.body.redbull.map((drink) => {
+
+    //     const ingredients = drink.ingredients.split(',')
+    //     drink.ingredients = ingredients
+
+    //     return drink
+    //   })
+    
         redbullUpdate(redbull, user, props.redbull._id)
             .then(() => handleClose())
             .then(() => {
