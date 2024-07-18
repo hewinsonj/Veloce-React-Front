@@ -111,7 +111,7 @@ const RedbullShow = ({ user, msgAlert }) => {
                     <Button onClick={() => setSnackModalShow(true)}
                         className="m-2" variant="info"
                     >
-                        Pair a {redbull.flavor} redbull with a gas station snack! Yum!
+                        Pair a {redbull.flavor} redbull with the wierdest gas station snack you can possibly think of! Yum!
                     </Button>
                     { 
                         redbull.owner && user && redbull.owner._id === user._id 
