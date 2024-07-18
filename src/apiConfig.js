@@ -1,7 +1,7 @@
 let apiUrl
 const apiUrls = {
     // YOU MUST CHANGE PRODUCTION URL WHEN DEPLOYING
-	production: 'https://veloce-react-front.fly.dev',
+	production: 'https://redbull-api.fly.dev',
 	development: 'http://localhost:8000',
 }
 
